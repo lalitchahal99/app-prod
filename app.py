@@ -68,7 +68,7 @@ except:
 def index():
     count = get_hit_count()
     r.bgsave()
-    return 'THIS IS SAMPLE FLASK APP. Hits on website so far is {}'.format(count)
+    return 'THIS IS FLASK APP. Hits on website so far is {}'.format(count)
 
 @app.route('/hits', methods=['GET'])
 def hello():
