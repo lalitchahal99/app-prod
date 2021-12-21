@@ -2,12 +2,12 @@ version: "3"
 services:
   flask:
     build: .
-    image: count-app:${TAG}
-    container_name: hit-app-${TAG}
+    image: flask-app:${TAG}
+    container_name: hit-count-${TAG}
     ports:
       - 5000:5000
     volumes:
-      - main:/home/countdb/${TAG}:rw
+      - main:/home/count_vol/${TAG}:rw
     environment:
       - FLASK_ENV=${ENV}
     networks:
@@ -23,7 +23,5 @@ services:
 
 volumes:
   main:
-    external: true
 networks:
   main:
-    external: true
