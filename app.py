@@ -11,7 +11,7 @@ app = Flask(__name__)
 CORS(app)
 # r = redis.Redis(host='localhost', port=6379, db=0, charset='utf-8', decode_responses=True)
 r = Redis(r'redislite.db', db=0, charset='utf-8', decode_responses=True)
-
+#comment
 try:
     keys = r.keys()
     print('Total keys: ', len(keys))
